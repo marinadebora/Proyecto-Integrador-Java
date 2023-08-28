@@ -1,8 +1,6 @@
-package EntitiesPersonas;
+package ModelsPeople;
 
-import EntitiesPersonas.Person;
-
-public class Suppliers extends Person {
+public class Suppliers extends People {
     protected String company;
     protected int cuit;
 

@@ -1,16 +1,16 @@
-package EntitiesPersonas;
+package ModelsPeople;
 
-public class Person {
+public class People {
     protected String name;
     protected String LastName;
     protected int phone;
     protected String email;
     protected int accountNumber;
 
-    public Person() {
+    public People() {
     }
 
-    public Person(String name, String lastName, int phone, String email, int accountNumber) {
+    public People(String name, String lastName, int phone, String email, int accountNumber) {
         this.name = name;
         LastName = lastName;
         this.phone = phone;

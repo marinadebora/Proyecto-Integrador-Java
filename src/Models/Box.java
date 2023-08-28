@@ -1,21 +1,21 @@
-package Entities;
+package Models;
 
 import java.util.Date;
 
 public abstract class Box {
 protected String date = new Date().toString();
 protected  double total;
-protected  String description;
+
 
 
 
     public Box() {
     }
 
-    public Box(String date, double total, String description) {
+    public Box(String date, double total) {
         this.date = date;
         this.total = total;
-        this.description = description;
+
 
     }
 
@@ -35,18 +35,12 @@ protected  String description;
         this.total = total;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
 
     public   double calculateTotal(double price,double amount){
         this.total= price * amount;
         return this.total;
-    };
+    }
 
 }

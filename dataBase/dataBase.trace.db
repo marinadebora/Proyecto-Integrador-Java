@@ -1,0 +1,628 @@
+2023-08-28 10:00:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tipo de dato desconocido : "BARCHAR"
+Unknown data type: "BARCHAR"; SQL statement:
+CREATE TABLE EXPENSES(ID INT PRIMARY KEY AUTO_INCREMENT, EXPENSETYPE VARCHAR(255),ADRESSES VARCHAR(255),AMOUNT DOUBLE, DATE BARCHAR(255) DESCRIPTION  BARCHAR(255)) [50004-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6367)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6205)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6187)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:6066)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9496)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9436)
+	at org.h2.command.Parser.parseCreate(Parser.java:6905)
+	at org.h2.command.Parser.parsePrepared(Parser.java:771)
+	at org.h2.command.Parser.parse(Parser.java:697)
+	at org.h2.command.Parser.parse(Parser.java:669)
+	at org.h2.command.Parser.prepareCommand(Parser.java:577)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:634)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:557)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.lang.Thread.run(Unknown Source)
+2023-08-28 10:01:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE EXPENSES(ID INT PRIMARY KEY AUTO_INCREMENT, EXPENSETYPE VARCHAR(255),ADRESSES VARCHAR(255),AMOUNT DOUBLE, DATE VARCHAR(255) [*]DESCRIPTION  VARCHAR(255))"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE EXPENSES(ID INT PRIMARY KEY AUTO_INCREMENT, EXPENSETYPE VARCHAR(255),ADRESSES VARCHAR(255),AMOUNT DOUBLE, DATE VARCHAR(255) [*]DESCRIPTION  VARCHAR(255))"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE EXPENSES(ID INT PRIMARY KEY AUTO_INCREMENT, EXPENSETYPE VARCHAR(255),ADRESSES VARCHAR(255),AMOUNT DOUBLE, DATE VARCHAR(255) DESCRIPTION  VARCHAR(255)) [42001-220]
+2023-08-28 10:09:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE EXPENSES ADD [*]DEFAULT GETDATE() FOR DATE"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE EXPENSES ADD [*]DEFAULT GETDATE() FOR DATE"; expected "identifier"; SQL statement:
+ALTER TABLE EXPENSES ADD DEFAULT GETDATE() FOR DATE [42001-220]
+2023-08-28 10:11:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DROP [*]EXPENSES"; se esperaba "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"
+Syntax error in SQL statement "DROP [*]EXPENSES"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+DROP EXPENSES [42001-220]
+2023-08-28 10:18:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Función "GETDATA" no encontrada
+Function "GETDATA" not found; SQL statement:
+CREATE TABLE Expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    expenseType  VARCHAR(255),
+    addressee VARCHAR(255),
+    amount DOUBLE,
+  date DATETIME DEFAULT GETDATA(),
+   
+) [90022-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readFunction(Parser.java:3912)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5297)
+	at org.h2.command.Parser.readTerm(Parser.java:4983)
+	at org.h2.command.Parser.readFactor(Parser.java:3463)
+	at org.h2.command.Parser.readSum(Parser.java:3450)
+	at org.h2.command.Parser.readConcat(Parser.java:3415)
+	at org.h2.command.Parser.readCondition(Parser.java:3205)
+	at org.h2.command.Parser.readExpression(Parser.java:3125)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:6083)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9496)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9436)
+	at org.h2.command.Parser.parseCreate(Parser.java:6905)
+	at org.h2.command.Parser.parsePrepared(Parser.java:771)
+	at org.h2.command.Parser.parse(Parser.java:697)
+	at org.h2.command.Parser.parse(Parser.java:669)
+	at org.h2.command.Parser.prepareCommand(Parser.java:577)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:634)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:557)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.lang.Thread.run(Unknown Source)
+2023-08-28 10:18:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Función "GETDATE" no encontrada
+Function "GETDATE" not found; SQL statement:
+CREATE TABLE Expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    expenseType  VARCHAR(255),
+    addressee VARCHAR(255),
+    amount DOUBLE,
+  date DATETIME DEFAULT GETDATE(),
+   
+) [90022-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readFunction(Parser.java:3912)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5297)
+	at org.h2.command.Parser.readTerm(Parser.java:4983)
+	at org.h2.command.Parser.readFactor(Parser.java:3463)
+	at org.h2.command.Parser.readSum(Parser.java:3450)
+	at org.h2.command.Parser.readConcat(Parser.java:3415)
+	at org.h2.command.Parser.readCondition(Parser.java:3205)
+	at org.h2.command.Parser.readExpression(Parser.java:3125)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:6083)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9496)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9436)
+	at org.h2.command.Parser.parseCreate(Parser.java:6905)
+	at org.h2.command.Parser.parsePrepared(Parser.java:771)
+	at org.h2.command.Parser.parse(Parser.java:697)
+	at org.h2.command.Parser.parse(Parser.java:669)
+	at org.h2.command.Parser.prepareCommand(Parser.java:577)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:634)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:557)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.lang.Thread.run(Unknown Source)
+2023-08-28 10:25:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Tipo de dato desconocido : "DEFAULT"
+Unknown data type: "DEFAULT"; SQL statement:
+CREATE TABLE Expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    expenseType  VARCHAR(255),
+    addressee VARCHAR(255),
+    amount DOUBLE,
+  date DEFAULT GETDATE()
+
+
+   
+) [50004-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readIfDataType1(Parser.java:6367)
+	at org.h2.command.Parser.readIfDataType(Parser.java:6205)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:6187)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:6066)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9496)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9436)
+	at org.h2.command.Parser.parseCreate(Parser.java:6905)
+	at org.h2.command.Parser.parsePrepared(Parser.java:771)
+	at org.h2.command.Parser.parse(Parser.java:697)
+	at org.h2.command.Parser.parse(Parser.java:669)
+	at org.h2.command.Parser.prepareCommand(Parser.java:577)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:634)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:557)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.lang.Thread.run(Unknown Source)
+2023-08-28 10:25:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Función "GETDATE" no encontrada
+Function "GETDATE" not found; SQL statement:
+CREATE TABLE Expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    expenseType  VARCHAR(255),
+    addressee VARCHAR(255),
+    amount DOUBLE,
+  date DATE DEFAULT GETDATE()
+
+
+   
+) [90022-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readFunction(Parser.java:3912)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5297)
+	at org.h2.command.Parser.readTerm(Parser.java:4983)
+	at org.h2.command.Parser.readFactor(Parser.java:3463)
+	at org.h2.command.Parser.readSum(Parser.java:3450)
+	at org.h2.command.Parser.readConcat(Parser.java:3415)
+	at org.h2.command.Parser.readCondition(Parser.java:3205)
+	at org.h2.command.Parser.readExpression(Parser.java:3125)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:6083)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9496)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9436)
+	at org.h2.command.Parser.parseCreate(Parser.java:6905)
+	at org.h2.command.Parser.parsePrepared(Parser.java:771)
+	at org.h2.command.Parser.parse(Parser.java:697)
+	at org.h2.command.Parser.parse(Parser.java:669)
+	at org.h2.command.Parser.prepareCommand(Parser.java:577)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:634)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:557)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.lang.Thread.run(Unknown Source)
+2023-08-28 10:26:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Función "GETDATE" no encontrada
+Function "GETDATE" not found; SQL statement:
+CREATE TABLE Expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    expenseType  VARCHAR(255),
+    addressee VARCHAR(255),
+    amount DOUBLE,
+  date date DEFAULT GETDATE()
+
+
+   
+) [90022-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readFunction(Parser.java:3912)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5297)
+	at org.h2.command.Parser.readTerm(Parser.java:4983)
+	at org.h2.command.Parser.readFactor(Parser.java:3463)
+	at org.h2.command.Parser.readSum(Parser.java:3450)
+	at org.h2.command.Parser.readConcat(Parser.java:3415)
+	at org.h2.command.Parser.readCondition(Parser.java:3205)
+	at org.h2.command.Parser.readExpression(Parser.java:3125)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:6083)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:9496)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:9436)
+	at org.h2.command.Parser.parseCreate(Parser.java:6905)
+	at org.h2.command.Parser.parsePrepared(Parser.java:771)
+	at org.h2.command.Parser.parse(Parser.java:697)
+	at org.h2.command.Parser.parse(Parser.java:669)
+	at org.h2.command.Parser.prepareCommand(Parser.java:577)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:634)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:557)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1109)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1096)
+	at org.h2.server.web.WebThread.process(WebThread.java:188)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.lang.Thread.run(Unknown Source)
+2023-08-28 10:27:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE Expenses (\000d\000a    id INT PRIMARY KEY AUTO_INCREMENT,\000d\000a    expenseType  VARCHAR(255),\000d\000a    addressee VARCHAR(255),\000d\000a    amount DOUBLE,\000d\000a  date date  NOT NULL  [*]GETDATE()\000d\000a\000d\000a\000d\000a   \000d\000a)"; se esperaba "AS, DEFAULT, GENERATED, ON UPDATE, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Expenses (\000d\000a    id INT PRIMARY KEY AUTO_INCREMENT,\000d\000a    expenseType  VARCHAR(255),\000d\000a    addressee VARCHAR(255),\000d\000a    amount DOUBLE,\000d\000a  date date  NOT NULL  [*]GETDATE()\000d\000a\000d\000a\000d\000a   \000d\000a)"; expected "AS, DEFAULT, GENERATED, ON UPDATE, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    expenseType  VARCHAR(255),
+    addressee VARCHAR(255),
+    amount DOUBLE,
+  date date  NOT NULL  GETDATE()
+
+
+   
+) [42001-220]
+2023-08-28 10:28:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE Expenses (\000d\000a    id INT PRIMARY KEY AUTO_INCREMENT,\000d\000a    expenseType  VARCHAR(255),\000d\000a    addressee VARCHAR(255),\000d\000a    amount DOUBLE,\000d\000a  date date  NOT NULL  [*]GETDATE(),\000d\000a\000d\000a\000d\000a   \000d\000a)"; se esperaba "AS, DEFAULT, GENERATED, ON UPDATE, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Expenses (\000d\000a    id INT PRIMARY KEY AUTO_INCREMENT,\000d\000a    expenseType  VARCHAR(255),\000d\000a    addressee VARCHAR(255),\000d\000a    amount DOUBLE,\000d\000a  date date  NOT NULL  [*]GETDATE(),\000d\000a\000d\000a\000d\000a   \000d\000a)"; expected "AS, DEFAULT, GENERATED, ON UPDATE, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    expenseType  VARCHAR(255),
+    addressee VARCHAR(255),
+    amount DOUBLE,
+  date date  NOT NULL  GETDATE(),
+
+
+   
+) [42001-220]
+2023-08-28 11:03:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE SALE ADD TOTAL[*]"; se esperaba "IDENTITY, BIGSERIAL, SERIAL, data type"
+Syntax error in SQL statement "ALTER TABLE SALE ADD TOTAL[*]"; expected "IDENTITY, BIGSERIAL, SERIAL, data type"; SQL statement:
+ALTER TABLE SALE ADD TOTAL [42001-220]
+2023-08-28 14:19:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO SALE ( PRODUCT  [*]PRICE  UNITS  DATE TOTAL VALUES (?,?,?,?,?)"; se esperaba ",, )"
+Syntax error in SQL statement "INSERT INTO SALE ( PRODUCT  [*]PRICE  UNITS  DATE TOTAL VALUES (?,?,?,?,?)"; expected ",, )"; SQL statement:
+INSERT INTO SALE ( PRODUCT  PRICE  UNITS  DATE TOTAL VALUES (?,?,?,?,?) [42001-220]
+2023-08-28 14:20:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO SALE ( PRODUCT  [*]PRICE  UNITS  DATE TOTAL VALUES (?,?)"; se esperaba ",, )"
+Syntax error in SQL statement "INSERT INTO SALE ( PRODUCT  [*]PRICE  UNITS  DATE TOTAL VALUES (?,?)"; expected ",, )"; SQL statement:
+INSERT INTO SALE ( PRODUCT  PRICE  UNITS  DATE TOTAL VALUES (?,?) [42001-220]
+2023-08-28 14:21:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO SALE ( PRODUCT  [*]PRICE  UNITS  DATE TOTAL VALUES (,, )"; se esperaba ",, )"
+Syntax error in SQL statement "INSERT INTO SALE ( PRODUCT  [*]PRICE  UNITS  DATE TOTAL VALUES (,, )"; expected ",, )"; SQL statement:
+INSERT INTO SALE ( PRODUCT  PRICE  UNITS  DATE TOTAL VALUES (,, ) [42001-220]
+2023-08-28 14:25:17 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-28 14:41:00 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.WebThread.process(WebThread.java:152)
+	at org.h2.server.web.WebThread.run(WebThread.java:101)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-28 14:42:26 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.SaleDaoH2Impl.<init>(SaleDaoH2Impl.java:16)
+	at Major.CreateSale.createSale(CreateSale.java:40)
+	at Major.CreateAction.createAction(CreateAction.java:16)
+	at Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-28 15:31:22 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.SaleDaoH2Impl.<init>(SaleDaoH2Impl.java:16)
+	at Major.CreateSale.createSale(CreateSale.java:42)
+	at Major.CreateAction.createAction(CreateAction.java:16)
+	at Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-28 15:31:52 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.SaleDaoH2Impl.<init>(SaleDaoH2Impl.java:16)
+	at Major.CreateSale.createSale(CreateSale.java:42)
+	at Major.CreateAction.createAction(CreateAction.java:16)
+	at Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-28 15:32:33 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.SaleDaoH2Impl.<init>(SaleDaoH2Impl.java:16)
+	at Major.CreateSale.createSale(CreateSale.java:42)
+	at Major.CreateAction.createAction(CreateAction.java:16)
+	at Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-28 18:14:21 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.ExpensesDaoH2Impl.<init>(ExpensesDaoH2Impl.java:16)
+	at Major.CreateBills.createBills(CreateBills.java:31)
+	at Major.CreateAction.createAction(CreateAction.java:20)
+	at Main.main(Main.java:11)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-28 19:11:55 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.ExpensesDaoH2Impl.<init>(ExpensesDaoH2Impl.java:15)
+	at Main.main(Main.java:15)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more
+2023-08-28 19:12:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "EXPENSESTYPE" no encontrada
+Column "EXPENSESTYPE" not found [42122-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at Dao.impl.ExpensesDaoH2Impl.getAll(ExpensesDaoH2Impl.java:52)
+	at Main.main(Main.java:16)
+2023-08-28 19:12:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "EXPENSETYPE" no encontrada
+Column "EXPENSETYPE" not found [42122-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at Dao.impl.ExpensesDaoH2Impl.getAll(ExpensesDaoH2Impl.java:52)
+	at Main.main(Main.java:16)
+2023-08-28 19:14:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "ADDRESSE" no encontrada
+Column "ADDRESSE" not found [42122-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3492)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
+	at Dao.impl.ExpensesDaoH2Impl.getAll(ExpensesDaoH2Impl.java:53)
+	at Main.main(Main.java:16)

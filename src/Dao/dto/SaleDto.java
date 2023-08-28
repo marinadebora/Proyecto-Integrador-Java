@@ -1,28 +1,22 @@
-package Entities;
+package Dao.dto;
 
-import Interfaces.CountInterface;
-
-public class Sale extends Box implements CountInterface {
+public class SaleDto extends  BoxDto{
     protected String product;
-    protected int count;
+
     protected double price;
     protected int units;
 
-
-    public Sale() {
+    public SaleDto() {
     }
 
-    public Sale(String product, double price, int units) {
+    public SaleDto(String product, double price, int units) {
         this.product = product;
         this.price = price;
         this.units = units;
-
-
-
     }
 
-    public Sale(String date, double total, String description, String product, double price, int units) {
-        super(date, total, description);
+    public SaleDto(String date, double total, String product, double price, int units) {
+        super(date, total);
         this.product = product;
         this.price = price;
         this.units = units;
@@ -35,8 +29,6 @@ public class Sale extends Box implements CountInterface {
     public void setProduct(String product) {
         this.product = product;
     }
-
-
 
     public double getPrice() {
         return price;
@@ -53,19 +45,8 @@ public class Sale extends Box implements CountInterface {
     public void setUnits(int units) {
         this.units = units;
     }
-
-
-
-
-
-
     @Override
     public String toString() {
-        return units + " "+ product + " " +  "  Precio unitario: $" + price ;
-    }
-
-    @Override
-    public int createId() {
-        return this.count +1 ;
+        return "Fecha: "+ date+ "\nCantidad: "+ units+ " Producto: "+product+ " Precio unitario "+ price+ "\nTotal "+ total ;
     }
 }

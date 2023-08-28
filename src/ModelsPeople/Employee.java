@@ -1,8 +1,6 @@
-package EntitiesPersonas;
+package ModelsPeople;
 
-import EntitiesPersonas.Person;
-
-public class Employee extends Person {
+public class Employee extends People {
     protected int ID;
     protected String address;
 
