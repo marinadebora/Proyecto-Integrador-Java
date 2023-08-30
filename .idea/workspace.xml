@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e8ee0aa6-5abd-4ba9-b10d-16ee732c33c3" name="Changes" comment="creating expenses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/dataBase.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/dataBase.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/Interfaces/ExpensesDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/InterfacesH2/ExpensesDaoH2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/Interfaces/SaleDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/InterfacesH2/SaleDaoH2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/dto/SaleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/dto/SaleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/impl/ExpensesDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/ExpensesDaoH2Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/impl/SaleDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/SaleDaoH2Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Major/CreateBills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateBills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Major/CreateSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateSale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Sale.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
