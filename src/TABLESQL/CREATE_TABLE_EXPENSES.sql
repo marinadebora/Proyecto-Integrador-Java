@@ -1,0 +1,12 @@
+CREATE TABLE EXPENSES(
+id INT PRIMARY KEY AUTO_INCREMENT,
+expenseType VARCHAR(50),
+addressee VARCHAR(50),
+amount DOUBLE,
+date VARCHAR(50),
+total DOUBLE
+
+);
+
+
+

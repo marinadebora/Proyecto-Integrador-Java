@@ -1,7 +1,7 @@
 package Dao.dto;
 
 public class SaleDto extends  BoxDto{
-    protected String product;
+    protected int product_id;
 
     protected double price;
     protected int units;
@@ -9,25 +9,25 @@ public class SaleDto extends  BoxDto{
     public SaleDto() {
     }
 
-    public SaleDto(String product, double price, int units) {
-        this.product = product;
+    public SaleDto(int product_id, double price, int units) {
+        this.product_id = product_id;
         this.price = price;
         this.units = units;
     }
 
-    public SaleDto(String date, double total, String product, double price, int units) {
+    public SaleDto(String date, double total, int product_id, double price, int units) {
         super(date, total);
-        this.product = product;
+        this.product_id = product_id;
         this.price = price;
         this.units = units;
     }
 
-    public String getProduct() {
-        return product;
+    public int getProduct_id() {
+        return product_id;
     }
 
-    public void setProduct(String product) {
-        this.product = product;
+    public void setProduct_id(int product_id) {
+        this.product_id = product_id;
     }
 
     public double getPrice() {
@@ -47,6 +47,6 @@ public class SaleDto extends  BoxDto{
     }
     @Override
     public String toString() {
-        return "Fecha: "+ date+ "\nCantidad: "+ units+ " Producto: "+product+ " Precio unitario "+ price+ "\nTotal "+ total ;
+        return "Fecha: "+ date+ "\nCantidad: "+ units+ " Producto: "+ product_id + " Precio unitario "+ price+ "\nTotal "+ total ;
     }
 }

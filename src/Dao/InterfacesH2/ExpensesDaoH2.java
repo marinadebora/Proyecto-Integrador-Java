@@ -1,11 +1,6 @@
-package Dao.Interfaces;
+package Dao.InterfacesH2;
 
 import Dao.dto.ExpensesDto;
-import Dao.dto.SaleDto;
-import Models.Expenses;
-import Models.Sale;
-
-import java.util.List;
 
 public interface ExpensesDaoH2 {
   //CREATE

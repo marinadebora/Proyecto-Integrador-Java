@@ -1,9 +1,8 @@
 package Major;
 
-import Dao.Interfaces.ExpensesDaoH2;
+import Dao.InterfacesH2.ExpensesDaoH2;
 import Dao.dto.ExpensesDto;
 import Dao.impl.ExpensesDaoH2Impl;
-import Models.Expenses;
 
 import java.util.Date;
 import java.util.Scanner;

@@ -1,7 +1,7 @@
 package Dao.impl;
 
 import Config.JdbcConfig;
-import Dao.Interfaces.ExpensesDaoH2;
+import Dao.InterfacesH2.ExpensesDaoH2;
 import Dao.dto.ExpensesDto;
 import Models.Expenses;
 

@@ -1,10 +1,9 @@
 package Major;
 
-import Dao.Interfaces.SaleDaoH2;
+import Dao.InterfacesH2.SaleDaoH2;
 import Dao.dto.SaleDto;
 import Dao.impl.SaleDaoH2Impl;
-import Models.Expenses;
-import Models.Sale;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,7 +23,7 @@ public class CreateSale {
                    List<SaleDto> productList= new ArrayList<>();
                     do {
                         System.out.println("ingrese el producto");
-                        String product= scanner.nextLine();
+                        int product_id= scanner.nextInt();
 
                         System.out.println("ingrese la cantidad");
                         units = scanner.nextInt();
@@ -32,7 +31,7 @@ public class CreateSale {
                         System.out.println("ingrese el precio");
                         price = scanner.nextDouble();
 
-                        sale = new SaleDto(product,price,units);
+                        sale = new SaleDto(product_id,price,units);
                         totalCompra+=sale.calculateTotal(price,units);
                         productList.add(sale);
                         System.out.println("para salir seleccione 1 o cualquier tecla para seguir");
@@ -40,7 +39,7 @@ public class CreateSale {
                         scanner.nextLine();
                         String date = new Date().toString();
                         SaleDaoH2 saleDaoH2 = new SaleDaoH2Impl();
-                        saleDto = new SaleDto(date,totalCompra,product,price,units);
+                        saleDto = new SaleDto(date,totalCompra,product_id,price,units);
                         saleDaoH2.insert(saleDto);
 
                     }while (!(salir == 1));
@@ -49,6 +48,3 @@ public class CreateSale {
 
     }
 }
-// protected  String expenseType;
-//    protected String addressee;
-//    protected double amount;

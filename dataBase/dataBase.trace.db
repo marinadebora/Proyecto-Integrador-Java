@@ -626,3 +626,237 @@ Column "ADDRESSE" not found [42122-220]
 	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:301)
 	at Dao.impl.ExpensesDaoH2Impl.getAll(ExpensesDaoH2Impl.java:53)
 	at Main.main(Main.java:16)
+2023-08-29 17:22:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE PRODUCTS(ID INT PRIMARY KEY AUTO_INCREMENT,NAME VARCHAR(50),BRAND VARCHAR(50),PRICE DOUBLE[*]"; se esperaba "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE PRODUCTS(ID INT PRIMARY KEY AUTO_INCREMENT,NAME VARCHAR(50),BRAND VARCHAR(50),PRICE DOUBLE[*]"; expected "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE PRODUCTS(ID INT PRIMARY KEY AUTO_INCREMENT,NAME VARCHAR(50),BRAND VARCHAR(50),PRICE DOUBLE [42001-220]
+2023-08-29 17:22:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]PRODUCTS"; se esperaba "PREPARE"
+Syntax error in SQL statement "[*]PRODUCTS"; expected "PREPARE"; SQL statement:
+PRODUCTS [42001-220]
+2023-08-29 17:26:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO PRODUCTS (NAME,BRAND,PRICE)[*]VALUE (?,?,?)"; se esperaba "OVERRIDING USER VALUE, OVERRIDING SYSTEM VALUE, DIRECT, SORTED, DEFAULT VALUES, VALUES, SET, WITH, (, SELECT, TABLE, VALUES"
+Syntax error in SQL statement "INSERT INTO PRODUCTS (NAME,BRAND,PRICE)[*]VALUE (?,?,?)"; expected "OVERRIDING USER VALUE, OVERRIDING SYSTEM VALUE, DIRECT, SORTED, DEFAULT VALUES, VALUES, SET, WITH, (, SELECT, TABLE, VALUES"; SQL statement:
+INSERT INTO PRODUCTS (NAME,BRAND,PRICE)VALUE (?,?,?) [42001-220]
+2023-08-29 17:45:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE Products(\000d\000aid INT PRIMARY KEY AUTO_INCREMENT,\000d\000aname VARCHAR(50)[*]"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Products(\000d\000aid INT PRIMARY KEY AUTO_INCREMENT,\000d\000aname VARCHAR(50)[*]"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Products(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50) [42001-220]
+2023-08-29 17:45:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]Brand VARCHAR(50)"; se esperaba "BACKUP, BEGIN"
+Syntax error in SQL statement "[*]Brand VARCHAR(50)"; expected "BACKUP, BEGIN"; SQL statement:
+Brand VARCHAR(50) [42001-220]
+2023-08-29 17:45:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]price DOUBLE NOT NULL,\000d\000a\000d\000a)"; se esperaba "PREPARE"
+Syntax error in SQL statement "[*]price DOUBLE NOT NULL,\000d\000a\000d\000a)"; expected "PREPARE"; SQL statement:
+price DOUBLE NOT NULL,
+
+) [42001-220]
+2023-08-29 17:46:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE Products(\000d\000aid INT PRIMARY KEY AUTO_INCREMENT,\000d\000aname VARCHAR(50)[*]"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE Products(\000d\000aid INT PRIMARY KEY AUTO_INCREMENT,\000d\000aname VARCHAR(50)[*]"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE Products(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50) [42001-220]
+2023-08-29 17:46:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]brand VARCHAR(50)"; se esperaba "BACKUP, BEGIN"
+Syntax error in SQL statement "[*]brand VARCHAR(50)"; expected "BACKUP, BEGIN"; SQL statement:
+brand VARCHAR(50) [42001-220]
+2023-08-29 17:46:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]price DOUBLE NOT NULL,\000d\000a\000d\000a)"; se esperaba "PREPARE"
+Syntax error in SQL statement "[*]price DOUBLE NOT NULL,\000d\000a\000d\000a)"; expected "PREPARE"; SQL statement:
+price DOUBLE NOT NULL,
+
+) [42001-220]
+2023-08-29 17:46:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE Products(\000d\000aid INT PRIMARY KEY AUTO_INCREMENT,\000d\000aname VARCHAR(50),\000d\000abrand VARCHAR(50),\000d\000aprice DOUBLE NOT NULL,\000d\000a\000d\000a[*])"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE Products(\000d\000aid INT PRIMARY KEY AUTO_INCREMENT,\000d\000aname VARCHAR(50),\000d\000abrand VARCHAR(50),\000d\000aprice DOUBLE NOT NULL,\000d\000a\000d\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE Products(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50),
+brand VARCHAR(50),
+price DOUBLE NOT NULL,
+
+) [42001-220]
+2023-08-29 17:49:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SALES(\000d\000aproduct_id INT,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES Products(id)\000d\000a)"; se esperaba "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE SALES(\000d\000aproduct_id INT,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES Products(id)\000d\000a)"; expected "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE SALES(
+product_id INT,
+price DOUBLE,
+units INT,
+date VARCHAR(50),
+total DOUBLE
+FOREIGN KEY (product_id) REFERENCES Products(id)
+) [42001-220]
+2023-08-29 17:51:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SALES(\000d\000aproduct_id INT NOT NULL,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES Products(id)\000d\000a)"; se esperaba "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE SALES(\000d\000aproduct_id INT NOT NULL,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES Products(id)\000d\000a)"; expected "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE SALES(
+product_id INT NOT NULL,
+price DOUBLE,
+units INT,
+date VARCHAR(50),
+total DOUBLE
+FOREIGN KEY (product_id) REFERENCES Products(id)
+) [42001-220]
+2023-08-29 17:51:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SALES(\000d\000aproduct_id INT NOT NULL,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES PRODUCTS(id)\000d\000a)"; se esperaba "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE SALES(\000d\000aproduct_id INT NOT NULL,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES PRODUCTS(id)\000d\000a)"; expected "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE SALES(
+product_id INT NOT NULL,
+price DOUBLE,
+units INT,
+date VARCHAR(50),
+total DOUBLE
+FOREIGN KEY (product_id) REFERENCES PRODUCTS(id)
+) [42001-220]
+2023-08-29 17:52:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SALES(\000d\000aproduct_id INT,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES PRODUCTS(id)\000d\000a)"; se esperaba "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE SALES(\000d\000aproduct_id INT,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES PRODUCTS(id)\000d\000a)"; expected "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE SALES(
+product_id INT,
+price DOUBLE,
+units INT,
+date VARCHAR(50),
+total DOUBLE
+FOREIGN KEY (product_id) REFERENCES PRODUCTS(id)
+) [42001-220]
+2023-08-29 17:52:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SALES(\000d\000aproduct_id INT,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES PRODUCTS(ID)\000d\000a)"; se esperaba "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE SALES(\000d\000aproduct_id INT,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES PRODUCTS(ID)\000d\000a)"; expected "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE SALES(
+product_id INT,
+price DOUBLE,
+units INT,
+date VARCHAR(50),
+total DOUBLE
+FOREIGN KEY (product_id) REFERENCES PRODUCTS(ID)
+) [42001-220]
+2023-08-29 17:53:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SALES(\000d\000aid INT PRIMARY KEY AUTO_INCREMENT,\000d\000aproduct_id INT,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES PRODUCTS(ID)\000d\000a)"; se esperaba "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE SALES(\000d\000aid INT PRIMARY KEY AUTO_INCREMENT,\000d\000aproduct_id INT,\000d\000aprice DOUBLE,\000d\000aunits INT,\000d\000adate VARCHAR(50),\000d\000atotal DOUBLE\000d\000a[*]FOREIGN KEY (product_id) REFERENCES PRODUCTS(ID)\000d\000a)"; expected "PRECISION, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE SALES(
+id INT PRIMARY KEY AUTO_INCREMENT,
+product_id INT,
+price DOUBLE,
+units INT,
+date VARCHAR(50),
+total DOUBLE
+FOREIGN KEY (product_id) REFERENCES PRODUCTS(ID)
+) [42001-220]
+2023-08-30 08:41:24 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.PructDaoH2Impl.<init>(PructDaoH2Impl.java:16)
+	at Major.CreateProducts.createProducts(CreateProducts.java:13)
+	at Main.main(Main.java:21)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 21 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 15 more
+2023-08-30 10:39:00 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.PructDaoH2Impl.<init>(PructDaoH2Impl.java:19)
+	at Major.UpdateProduct.updateProduct(UpdateProduct.java:12)
+	at Major.Selectoption.selectOption(Selectoption.java:36)
+	at Main.main(Main.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-30 10:39:23 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convert(DbException.java:407)
+	at org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:1547)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2036)
+	at org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at org.h2.engine.Database.<init>(Database.java:324)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at Config.JdbcConfig.getDBConnection(JdbcConfig.java:17)
+	at Dao.impl.PructDaoH2Impl.<init>(PructDaoH2Impl.java:19)
+	at Major.UpdateProduct.updateProduct(UpdateProduct.java:12)
+	at Major.Selectoption.selectOption(Selectoption.java:36)
+	at Main.main(Main.java:24)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]" [50000-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 22 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/dataBase/dataBase.mv.db [2.2.220/7]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 16 more
+2023-08-30 10:41:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: No hay datos disponibles.
+No data is available [2000-220]

@@ -1,18 +1,18 @@
 package Models;
 
 public class Sale extends Box  {
-    protected String product;
+    protected int product_id;
 
     protected double price;
     protected int units;
-    int count;
+
 
 
     public Sale() {
     }
 
-    public Sale(String product, double price, int units,int count) {
-        this.product = product;
+    public Sale(int product_id, double price, int units) {
+        this.product_id = product_id;
         this.price = price;
         this.units = units;
 
@@ -20,19 +20,19 @@ public class Sale extends Box  {
 
     }
 
-    public Sale(String date, double total, String product, double price, int units) {
+    public Sale(String date, double total, int product_id, double price, int units) {
         super(date, total);
-        this.product = product;
+        this.product_id = product_id;
         this.price = price;
         this.units = units;
     }
 
-    public String getProduct() {
-        return product;
+    public int getProduct_id() {
+        return product_id;
     }
 
-    public void setProduct(String product) {
-        this.product = product;
+    public void setProduct_id(int product_id) {
+        this.product_id = product_id;
     }
 
 
@@ -60,7 +60,7 @@ public class Sale extends Box  {
 
     @Override
     public String toString() {
-        return units + " "+ product + " " +  "  Precio unitario: $" + price ;
+        return units + " "+ product_id + " " +  "  Precio unitario: $" + price ;
     }
 
 
