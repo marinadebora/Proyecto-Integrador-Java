@@ -63,23 +63,28 @@ PreparedStatement preparedStatement = null;
       preparedStatement = connection.prepareStatement("SELECT * FROM PRODUCTS WHERE ID = ?");
       preparedStatement.setInt(1,productId);
       ResultSet result = preparedStatement.executeQuery();
-      productDto.setName(result.getString("NAME"));
-      productDto.setBrand(result.getString("BRAND"));
-      productDto.setPrice(result.getDouble("PRICE"));
+      if(result.next()){
+        productDto.setName(result.getString("NAME"));
+        productDto.setBrand(result.getString("BRAND"));
+        productDto.setPrice(result.getDouble("PRICE"));
+        return productDto;
+      }
+      return null;
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
-    return productDto;
+
   }
 
   @Override
-  public void update(ProductDto productDto) {
+  public void update(ProductDto productDto,int id) {
     Product product = convertDtoToObject(productDto);
     try {
-      preparedStatement = connection.prepareStatement("UPDATE PRODUCT SET NAME = ?, BRAND = ?, PRICE = ? WHERE id = ?");
+      preparedStatement = connection.prepareStatement("UPDATE PRODUCTS SET NAME = ?, BRAND = ?, PRICE = ? WHERE id = ?");
       preparedStatement.setString(1,product.getName());
       preparedStatement.setString(2,product.getBrand());
       preparedStatement.setDouble(3,product.getPrice());
+      preparedStatement.setInt(4,id);
       preparedStatement.executeUpdate();
     } catch (SQLException e) {
       throw new RuntimeException(e);
@@ -88,7 +93,19 @@ PreparedStatement preparedStatement = null;
 
   @Override
   public void delete(int productId) {
+    try {
+      preparedStatement = connection.prepareStatement("DELETE FROM PRODUCTS WHERE id=?");
+      preparedStatement.setInt(1,productId);
+      int erased = preparedStatement.executeUpdate();
 
+      if(erased ==0){
+        System.out.println("Ocurrio un error el producto no fue eliminado");
+      }else{
+        System.out.println("Producto eliminado con exito");
+      }
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
   }
  public  Product convertDtoToObject (ProductDto productDto){
    Product product = new Product();

@@ -40,10 +40,10 @@ public class ProductDto {
 
   @Override
   public String toString() {
-    return "ProductDto{" +
-        "name='" + name + '\'' +
-        ", brand='" + brand + '\'' +
-        ", price=" + price +
-        '}';
+    return "____________________________________________________\n"+
+        "Nombre: " + name + '\n' +
+        "Marca: " + brand + '\n' +
+        "Precio: " + price +
+        "\n____________________________________________________" ;
   }
 }

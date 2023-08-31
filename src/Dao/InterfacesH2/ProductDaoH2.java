@@ -9,7 +9,7 @@ public interface ProductDaoH2 {
   void getAll();
   ProductDto getById(int productId);
 //UPDATE
-  void update(ProductDto productDto);
+  void update(ProductDto productDto,int id);
 //DELETE
   void delete(int productId);
 }

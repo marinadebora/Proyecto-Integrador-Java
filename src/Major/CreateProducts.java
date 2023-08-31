@@ -25,6 +25,7 @@ public class CreateProducts {
       productDto.setBrand(brand);
       productDto.setPrice(price);
       productDaoH2.insert(productDto);
+      System.out.println(productDto);
       }
 
 }

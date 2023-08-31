@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="e8ee0aa6-5abd-4ba9-b10d-16ee732c33c3" name="Changes" comment="creating expenses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/dataBase.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/dataBase.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/InterfacesH2/ProductDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/InterfacesH2/ProductDaoH2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/impl/PructDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/PructDaoH2Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/CreateProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/Selectoption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/Selectoption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/UpdateProduct.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +46,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/PiuchyHP/Desktop/CursoJava/resueltoClase15",
+    "last_opened_file_path": "C:/Users/PiuchyHP/Desktop/CursoJava/proyectoIntegrador-expenseReportApp-modulo3",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"

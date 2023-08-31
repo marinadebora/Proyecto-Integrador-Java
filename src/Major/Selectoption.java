@@ -28,12 +28,21 @@ public class Selectoption {
   switch (option){
     case 1:
       CreateSale.createSale();
+      break;
     case 2:
       CreateBills.createBills();
+      break;
     case 3:
       CreateProducts.createProducts();
+      break;
     case 4:
      UpdateProduct.updateProduct();
+     break;
+    case 5:
+      DeleteProduct.deleteProduct();
+      break;
+    default:
+      System.out.println("ingrese una opcion valida");
 
   }
     }while (option != 0);
