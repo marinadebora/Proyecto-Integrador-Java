@@ -1,7 +1,5 @@
 package Dao.dto;
 
-import java.util.Date;
-
 public class BoxDto {
     protected String date ;
     protected  double total;

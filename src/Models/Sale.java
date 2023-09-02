@@ -5,9 +5,6 @@ public class Sale extends Box  {
 
     protected double price;
     protected int units;
-
-
-
     public Sale() {
     }
 
@@ -15,9 +12,6 @@ public class Sale extends Box  {
         this.product_id = product_id;
         this.price = price;
         this.units = units;
-
-
-
     }
 
     public Sale(String date, double total, int product_id, double price, int units) {
@@ -35,8 +29,6 @@ public class Sale extends Box  {
         this.product_id = product_id;
     }
 
-
-
     public double getPrice() {
         return price;
     }
@@ -53,16 +45,9 @@ public class Sale extends Box  {
         this.units = units;
     }
 
-
-
-
-
-
     @Override
     public String toString() {
         return units + " "+ product_id + " " +  "  Precio unitario: $" + price ;
     }
-
-
 
 }

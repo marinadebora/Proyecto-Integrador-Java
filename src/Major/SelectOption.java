@@ -1,13 +1,13 @@
 package Major;
 
-import Dao.exception.InvalidException;
+import Exceptions.InvalidException;
 
 import java.util.Scanner;
 
-public class Selectoption {
+public class SelectOption {
   public static void selectOption() throws InvalidException{
     Scanner scanner = new Scanner(System.in);
-    int option =1;
+    int option;
     do {
       System.out.println("ELIJA UNA OPCION: ");
       System.out.println("____________________________________________________");
@@ -15,9 +15,9 @@ public class Selectoption {
       System.out.println("1. CREAR VENTA");
       System.out.println("2. CREAR GASTO");
       System.out.println("3. CREAR PRODUCTO");
-      System.out.println("4. EDITAR PRODUCTO");
-      System.out.println("5. ELIMINAR PRODUCTO");
-      System.out.println("6. CERRAR CAJA");
+      System.out.println("4. VER TODOS LOS  PRODUCTO");
+      System.out.println("5. EDITAR PRODUCTO");
+      System.out.println("6. ELIMINAR PRODUCTO");
       System.out.println("____________________________________________________");
       boolean isInt = scanner.hasNextInt();
       if (isInt){
@@ -25,26 +25,14 @@ public class Selectoption {
       }else {
        throw new InvalidException("Ingrese un número valido");
       }
-  switch (option){
-    case 1:
-      CreateSale.createSale();
-      break;
-    case 2:
-      CreateBills.createBills();
-      break;
-    case 3:
-      CreateProducts.createProducts();
-      break;
-    case 4:
-     UpdateProduct.updateProduct();
-     break;
-    case 5:
-      DeleteProduct.deleteProduct();
-      break;
-    default:
-      System.out.println("ingrese una opcion valida");
-
-  }
+      switch (option) {
+        case 1 -> CreateSale.createSale();
+        case 2 -> CreateBills.createBills();
+        case 3 -> CreateProducts.createProducts();
+        case 4 -> SeeAllProducts.seeAllProducts();
+        case 5 -> UpdateProduct.updateProduct();
+        case 6 -> DeleteProduct.deleteProduct();
+      }
     }while (option != 0);
   }
 }

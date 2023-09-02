@@ -5,10 +5,6 @@ import java.util.Date;
 public abstract class Box {
 protected String date = new Date().toString();
 protected  double total;
-
-
-
-
     public Box() {
     }
 
@@ -34,9 +30,6 @@ protected  double total;
     public void setTotal(double total) {
         this.total = total;
     }
-
-
-
 
     public   double calculateTotal(double price,double amount){
         this.total= price * amount;

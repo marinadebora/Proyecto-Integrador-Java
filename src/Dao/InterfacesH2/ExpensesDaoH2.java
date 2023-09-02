@@ -1,14 +1,13 @@
 package Dao.InterfacesH2;
 
 import Dao.dto.ExpensesDto;
+import Exceptions.DAOException;
 
 public interface ExpensesDaoH2 {
   //CREATE
-  void insert(ExpensesDto expensesDto);
+  void insert(ExpensesDto expensesDto) throws DAOException;
   //READ
-  void getAll();
-  //UPDATE
-  void update(ExpensesDto expensesDto);
-  //DELETE
-  void delete(int expensesId);
+  void getAll()throws DAOException;
+
+
 }

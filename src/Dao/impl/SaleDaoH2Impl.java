@@ -1,11 +1,9 @@
 package Dao.impl;
 
 import Dao.InterfacesH2.SaleDaoH2;
-import Dao.dto.ProductDto;
 import Dao.dto.SaleDto;
-import Models.Product;
+import Exceptions.DAOException;
 import Models.Sale;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,12 +21,12 @@ public class SaleDaoH2Impl implements SaleDaoH2 {
     PreparedStatement preparedStatement = null;
 
     @Override
-    public void insert(SaleDto saleDto) {
+    public void insert(SaleDto saleDto) throws DAOException {
        Sale newSale = convertDtoToObject(saleDto);
 
         try {
             preparedStatement = connection.prepareStatement(
-                    "INSERT INTO SALE ( PRODUCT , PRICE , UNITS , DATE ,TOTAL) VALUES (?,?,?,?,?)");
+                    "INSERT INTO SALES ( PRODUCT_ID , PRICE , UNITS , DATE ,TOTAL) VALUES (?,?,?,?,?)");
             preparedStatement.setInt(1,newSale.getProduct_id());
             preparedStatement.setDouble(2,newSale.getPrice());
             preparedStatement.setInt(3,newSale.getUnits());
@@ -36,12 +34,12 @@ public class SaleDaoH2Impl implements SaleDaoH2 {
             preparedStatement.setDouble(5,newSale.getTotal());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new DAOException("No se pudo cargar la venta",e);
         }
     }
 
     @Override
-    public void  getAll() {
+    public List <SaleDto>  getAll() throws DAOException{
         List <SaleDto> saleDtoList = new ArrayList<>();
         SaleDto saleDto = new SaleDto();
         convertDtoToObject(saleDto);
@@ -49,18 +47,12 @@ public class SaleDaoH2Impl implements SaleDaoH2 {
             preparedStatement = connection.prepareStatement("SELECT * FROM SALES");
             ResultSet result = preparedStatement.executeQuery();
             while (result.next()){
-
-                saleDto.setProduct_id(result.getInt("PRODUCT_ID"));
-                saleDto.setPrice(result.getDouble("PRICE"));
-                saleDto.setUnits(result.getInt("UNITS"));
-                saleDto.setDate(result.getString("DATE"));
-                saleDto.setTotal(result.getDouble("TOTAL"));
-                saleDtoList.add(saleDto);
+               saleDtoList.add(convertResulSetToDto(result));
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new  DAOException("error al buscar los productos",e);
         }
-        saleDtoList.forEach(System.out::println);
+        return saleDtoList;
     }
 
     public Sale convertDtoToObject (SaleDto saleDto){
@@ -73,5 +65,19 @@ public class SaleDaoH2Impl implements SaleDaoH2 {
         return newSale;
     }
 
+    public SaleDto convertResulSetToDto(ResultSet result){
+        SaleDto saleDto = new SaleDto();
+        try {
+            saleDto.setProduct_id(result.getInt("PRODUCT_ID"));
+            saleDto.setPrice(result.getDouble("PRICE"));
+            saleDto.setUnits(result.getInt("UNITS"));
+            saleDto.setDate(result.getString("DATE"));
+            saleDto.setTotal(result.getDouble("TOTAL"));
+            convertDtoToObject(saleDto);
+            return saleDto;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
+    }
 }
