@@ -3,8 +3,8 @@ package Dao.impl;
 import Config.JdbcConfig;
 import Dao.InterfacesH2.ExpensesDaoH2;
 import Dao.dto.ExpensesDto;
+import Exceptions.DAOException;
 import Models.Expenses;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,15 +16,13 @@ public class ExpensesDaoH2Impl implements ExpensesDaoH2 {
   }
   PreparedStatement preparedStatement = null;
   @Override
-  public void insert(ExpensesDto expensesDto) {
+  public void insert(ExpensesDto expensesDto) throws DAOException {
     Expenses expenses = new Expenses();
     expenses.setExpenseType(expensesDto.getExpenseType());
     expenses.setAddressee(expensesDto.getAddressee());
     expenses.setAmount(expensesDto.getAmount());
     expenses.setDate(expensesDto.getDate());
     expenses.setTotal(expensesDto.getTotal());
-
-
     try {
       preparedStatement = connection.prepareStatement(
           "INSERT INTO EXPENSES (EXPENSETYPE, ADDRESSEE ,AMOUNT  ,DATE  ,TOTAL ) VALUES (?,?,?,?,?)");
@@ -36,12 +34,12 @@ public class ExpensesDaoH2Impl implements ExpensesDaoH2 {
      preparedStatement.executeUpdate();
 
     } catch (SQLException e) {
-      throw new RuntimeException(e);
+      throw new DAOException("error al intentar crear un gasto",e);
     }
   }
 
   @Override
-  public void  getAll() {
+  public void  getAll() throws DAOException{
     List<ExpensesDto> expensesList = new ArrayList<>();
     try {
       preparedStatement = connection.prepareStatement("SELECT * FROM EXPENSES");
@@ -57,22 +55,9 @@ public class ExpensesDaoH2Impl implements ExpensesDaoH2 {
     expensesList.add(expensesDto);
   }
       System.out.println(result);
-
-
     } catch (SQLException e) {
-      throw new RuntimeException(e);
+      throw new DAOException("error al buscar gastos",e);
     }
-
     expensesList.forEach(System.out::println);
-  }
-
-  @Override
-  public void update(ExpensesDto expensesDto) {
-
-  }
-
-  @Override
-  public void delete(int expensesId) {
-
   }
 }

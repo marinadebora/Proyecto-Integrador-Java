@@ -3,6 +3,7 @@ package Major;
 import Dao.InterfacesH2.ExpensesDaoH2;
 import Dao.dto.ExpensesDto;
 import Dao.impl.ExpensesDaoH2Impl;
+import Exceptions.DAOException;
 
 import java.util.Date;
 import java.util.Scanner;
@@ -29,8 +30,14 @@ public class CreateBills {
             String date = new Date().toString();
             ExpensesDaoH2 expensesDaoH2= new ExpensesDaoH2Impl();
             expensesDto = new ExpensesDto(date, amount,expenseType,addressee,amount);
-            expensesDaoH2.insert(expensesDto);
+            try {
+                expensesDaoH2.insert(expensesDto);
+            } catch (DAOException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println("____________________________________________________");
             System.out.println(expensesDto);
+            System.out.println("____________________________________________________");
 
         }while (!(salir == 1));
 

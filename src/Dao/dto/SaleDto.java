@@ -45,8 +45,10 @@ public class SaleDto extends  BoxDto{
     public void setUnits(int units) {
         this.units = units;
     }
+
     @Override
     public String toString() {
-        return "Fecha: "+ date+ "\nCantidad: "+ units+ " Producto: "+ product_id + " Precio unitario "+ price+ "\nTotal "+ total ;
+        return
+             "codigo "+product_id + " Cantidad "+units +" Precio unitario $"+ price +" Total:  "+  total ;
     }
 }

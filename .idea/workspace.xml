@@ -9,10 +9,16 @@
       <change beforePath="$PROJECT_DIR$/dataBase/dataBase.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/dataBase.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dataBase/dataBase.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/dataBase.trace.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Dao/InterfacesH2/ProductDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/InterfacesH2/ProductDaoH2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/impl/PructDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/PructDaoH2Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/InterfacesH2/SaleDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/InterfacesH2/SaleDaoH2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/dto/SaleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/dto/SaleDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/impl/PructDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/ProductDaoH2Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/impl/SaleDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/SaleDaoH2Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/CreateBills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateBills.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Major/CreateProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Major/Selectoption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/Selectoption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/CreateSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateSale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/DeleteProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/DeleteProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/Selectoption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/SelectOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Major/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/UpdateProduct.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/PiuchyHP/Desktop/CursoJava/proyectoIntegrador-expenseReportApp-modulo3",
+    "last_opened_file_path": "C:/Users/PiuchyHP/Desktop/CursoJava/proyectoIntegrador-expenseReportApp-modulo4",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"

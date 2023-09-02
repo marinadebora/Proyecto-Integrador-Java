@@ -47,5 +47,5 @@ public class ExpensesDto extends BoxDto{
     @Override
     public String toString() {
         return "Fecha: "+ date+ "\nTipo de Gasto: "+expenseType+ " Destinatario: "+addressee+ " Importe: "+ amount+"\nTotal "+ amount ;
-    }//date, amount,expenseType,addressee,amount
+    }
 }

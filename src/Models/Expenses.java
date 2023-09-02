@@ -4,7 +4,6 @@ public class Expenses extends Box   {
     protected  String expenseType;
     protected String addressee;
     protected double amount;
-
     public Expenses() {
     }
 
