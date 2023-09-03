@@ -18,6 +18,7 @@ public class SelectOption {
       System.out.println("4. VER TODOS LOS  PRODUCTO");
       System.out.println("5. EDITAR PRODUCTO");
       System.out.println("6. ELIMINAR PRODUCTO");
+      System.out.println("7. CERRAR CAJA");
       System.out.println("____________________________________________________");
       boolean isInt = scanner.hasNextInt();
       if (isInt){
@@ -32,6 +33,7 @@ public class SelectOption {
         case 4 -> SeeAllProducts.seeAllProducts();
         case 5 -> UpdateProduct.updateProduct();
         case 6 -> DeleteProduct.deleteProduct();
+        case 7 ->CloseBox.closeBox();
       }
     }while (option != 0);
   }

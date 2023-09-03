@@ -18,6 +18,10 @@ public class SaleDaoH2Impl implements SaleDaoH2 {
         this.connection = JdbcConfig.getDBConnection();
     }
 
+    public SaleDaoH2Impl(Connection connection) {
+        this.connection = connection;
+    }
+
     PreparedStatement preparedStatement = null;
 
     @Override
