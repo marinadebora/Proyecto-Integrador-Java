@@ -6,20 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e8ee0aa6-5abd-4ba9-b10d-16ee732c33c3" name="Changes" comment="creating expenses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/dataBase.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/dataBase/dataBase.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/InterfacesH2/ProductDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/InterfacesH2/ProductDaoH2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/InterfacesH2/SaleDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/InterfacesH2/SaleDaoH2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/dto/SaleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/dto/SaleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/impl/PructDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/ProductDaoH2Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/impl/SaleDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/SaleDaoH2Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto-Integrador.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto-Integrador.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.mv.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/JdbcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/JdbcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/dto/CloseBoxDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exceptions/DAOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/DAOException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Major/CreateBills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateBills.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Major/CreateProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateProducts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/CloseBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CloseBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Major/CreateSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateSale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Major/DeleteProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/DeleteProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Major/Selectoption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/SelectOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Major/UpdateProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/UpdateProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/SelectOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/SelectOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_EXPENSES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_EXPENSES.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_PRODUCTS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_PRODUCTS.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TABLESQL/INSERT_INTO_PRODUCTS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/TABLESQL/INSERT_INTO_PRODUCTS.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +36,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -50,17 +52,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/PiuchyHP/Desktop/CursoJava/proyectoIntegrador-expenseReportApp-modulo4",
+    "last_opened_file_path": "C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/h2Mokito/opentest4j-1.0.0.jar",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PiuchyHP\Desktop\CursoJava\Proyecto-Integrador\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Proyecto-Integrador" />
@@ -68,9 +79,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExpensesDaoH2ImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-Integrador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="Test.dao.impl.ExpensesDaoH2ImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpensesDaoH2ImplTest.getAll_ExpensesIfTheyExistInDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-Integrador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="Test.dao.impl.ExpensesDaoH2ImplTest" />
+      <option name="METHOD_NAME" value="getAll_ExpensesIfTheyExistInDB" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpensesDaoH2ImplTest.testInsertExpenses" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-Integrador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="Test.dao.impl.ExpensesDaoH2ImplTest" />
+      <option name="METHOD_NAME" value="testInsertExpenses" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaleDaoH2ImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-Integrador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="Test.dao.impl.SaleDaoH2ImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ExpensesDaoH2ImplTest" />
+        <item itemvalue="JUnit.SaleDaoH2ImplTest" />
+        <item itemvalue="JUnit.ExpensesDaoH2ImplTest.getAll_ExpensesIfTheyExistInDB" />
+        <item itemvalue="JUnit.ExpensesDaoH2ImplTest.testInsertExpenses" />
       </list>
     </recent_temporary>
   </component>
@@ -106,5 +183,16 @@
     <MESSAGE value="firs commit" />
     <MESSAGE value="creating expenses" />
     <option name="LAST_COMMIT_MESSAGE" value="creating expenses" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Dao/impl/ProductDaoH2Impl.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

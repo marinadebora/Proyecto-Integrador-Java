@@ -14,6 +14,11 @@ public class ExpensesDaoH2Impl implements ExpensesDaoH2 {
   public ExpensesDaoH2Impl() {
     this.connection = JdbcConfig.getDBConnection();
   }
+
+  public ExpensesDaoH2Impl(Connection connection) {
+    this.connection = connection;
+  }
+
   PreparedStatement preparedStatement = null;
   @Override
   public void insert(ExpensesDto expensesDto) throws DAOException {
@@ -39,7 +44,7 @@ public class ExpensesDaoH2Impl implements ExpensesDaoH2 {
   }
 
   @Override
-  public void  getAll() throws DAOException{
+  public List<ExpensesDto>  getAll() throws DAOException{
     List<ExpensesDto> expensesList = new ArrayList<>();
     try {
       preparedStatement = connection.prepareStatement("SELECT * FROM EXPENSES");
@@ -54,10 +59,10 @@ public class ExpensesDaoH2Impl implements ExpensesDaoH2 {
     expensesDto.setTotal(result.getDouble("TOTAL"));
     expensesList.add(expensesDto);
   }
-      System.out.println(result);
+
     } catch (SQLException e) {
       throw new DAOException("error al buscar gastos",e);
     }
-    expensesList.forEach(System.out::println);
+    return expensesList;
   }
 }

@@ -18,6 +18,11 @@ public class ProductDaoH2Impl implements ProductDaoH2 {
   public ProductDaoH2Impl() {
     this.connection = JdbcConfig.getDBConnection();
   }
+
+  public ProductDaoH2Impl(Connection connection) {
+    this.connection = connection;
+  }
+
   PreparedStatement preparedStatement = null;
   @Override
   public void insert(ProductDto productDto) throws DAOException{
