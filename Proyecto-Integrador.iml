@@ -35,7 +35,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/apiguardian-api-1.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/apiguardian-api-1.0.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -44,7 +44,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/byte-buddy-1.9.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/byte-buddy-1.9.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -53,7 +53,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/byte-buddy-agent-1.9.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/byte-buddy-agent-1.9.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -62,7 +62,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/junit-jupiter-api-5.1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/junit-jupiter-api-5.1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -71,7 +71,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/junit-platform-commons-1.1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/junit-platform-commons-1.1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -80,7 +80,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/mockito-core-2.24.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/mockito-core-2.24.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -89,7 +89,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/mockito-junit-jupiter-2.24.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/mockito-junit-jupiter-2.24.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -98,7 +98,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/objenesis-2.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/objenesis-2.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -107,7 +107,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Mockito/opentest4j-1.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/h2Mokito/opentest4j-1.0.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

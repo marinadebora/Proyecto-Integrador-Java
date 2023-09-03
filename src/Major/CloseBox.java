@@ -3,17 +3,15 @@ package Major;
 import Dao.InterfacesH2.ExpensesDaoH2;
 import Dao.InterfacesH2.SaleDaoH2;
 import Dao.dto.BoxDto;
-import Dao.dto.CloseBoxDto;
 import Dao.dto.ExpensesDto;
 import Dao.dto.SaleDto;
 import Dao.impl.ExpensesDaoH2Impl;
 import Dao.impl.SaleDaoH2Impl;
 import Exceptions.DAOException;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Stream;
+
 
 public class CloseBox {
   public static void closeBox(){
@@ -30,7 +28,7 @@ public class CloseBox {
     }
 
     List<SaleDto> todaySaleFilter = saleDtoList.stream()
-            .filter(e->date.contains(today))
+            .filter(e->e.getDate().contains(today))
            .toList();
     List<Double> saleFilter=todaySaleFilter.stream()
         .map(BoxDto::getTotal)
@@ -44,7 +42,7 @@ public class CloseBox {
 
 
     List<ExpensesDto> todayExpenseFilter = expensesDtoList.stream()
-        .filter(e->date.contains(today))
+        .filter(e->e.getDate().contains(today))
         .toList();
     List<Double> expenseFilter=todayExpenseFilter.stream()
         .map(BoxDto::getTotal)
@@ -54,9 +52,15 @@ public class CloseBox {
     int addExpense = expenseFilter.stream().mapToInt(Double::intValue).sum();
     int totalBox = addSale - addExpense;
 
-    System.out.println(date+"\nVenta total del dia : "+ addSale + "\n Gasto total del dia: "+ addExpense + "\n Total de Caja: "+totalBox);
+    System.out.println("____________________________________________________"+
+                      "\n "+date+
+                      "\n Venta total del dia: "+ addSale +
+                      "\n Gasto total del dia: "+ addExpense +
+                      "\n Total de Caja: "+totalBox+
+                      "\n____________________________________________________");
 
 
   }
+
 
 }

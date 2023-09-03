@@ -8,6 +8,8 @@ import Dao.dto.SaleDto;
 import Dao.impl.ProductDaoH2Impl;
 import Dao.impl.SaleDaoH2Impl;
 import Exceptions.DAOException;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -32,7 +34,7 @@ public class CreateSale {
           try {
             getProductDto = productDaoH2.getById(product_id);
           } catch (DAOException e) {
-            throw new RuntimeException(e);
+            throw new NullPointerException("El producto no existe en la base de datos");
           }
 
           double price = getProductDto.getPrice();
