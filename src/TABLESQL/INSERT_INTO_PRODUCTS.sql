@@ -9,6 +9,6 @@ VALUES
 ('campera', 'Narrow', 49600),
 ('pantalon', 'Riffle', 19700),
 ('remera', 'Riffle', 29800),
-('campera', 'Roffle', 38200);
+('campera', 'Riffle', 38200);
 
 LOS PRODUCTOS TAMBIEN PUEDEN SER CREADOS DESDE LA CONSOLA.

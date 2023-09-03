@@ -7,13 +7,17 @@
     <list default="true" id="e8ee0aa6-5abd-4ba9-b10d-16ee732c33c3" name="Changes" comment="creating expenses">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Proyecto-Integrador.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto-Integrador.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/InterfacesH2/ExpensesDaoH2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/InterfacesH2/ExpensesDaoH2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/impl/ExpensesDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/ExpensesDaoH2Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/impl/ProductDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/ProductDaoH2Impl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dao/impl/SaleDaoH2Impl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/impl/SaleDaoH2Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.mv.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataBase/dataBase.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Config/JdbcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Config/JdbcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/dto/CloseBoxDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exceptions/DAOException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/DAOException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/CloseBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CloseBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Major/CreateSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/CreateSale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Major/SelectOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Major/SelectOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_EXPENSES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_EXPENSES.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_PRODUCTS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_PRODUCTS.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_SALES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/TABLESQL/CREATE_TABLE_SALES.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TABLESQL/INSERT_INTO_PRODUCTS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/TABLESQL/INSERT_INTO_PRODUCTS.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/PiuchyHP/Desktop/CursoJava/Mockito/opentest4j-1.0.0.jar",
+    "last_opened_file_path": "C:/Users/PiuchyHP/Desktop/CursoJava/Proyecto-Integrador/h2Mokito/opentest4j-1.0.0.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -71,6 +75,21 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Proyecto-Integrador" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExpensesDaoH2ImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Proyecto-Integrador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="Test.dao.impl.ExpensesDaoH2ImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,22 +126,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductDaoH2ImplTest.deleteProductIfIdValid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Proyecto-Integrador" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.dao.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test.dao.impl" />
-      <option name="MAIN_CLASS_NAME" value="Test.dao.impl.ProductDaoH2ImplTest" />
-      <option name="METHOD_NAME" value="deleteProductIfIdValid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SaleDaoH2ImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Proyecto-Integrador" />
       <extension name="coverage">
@@ -141,10 +144,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ExpensesDaoH2ImplTest" />
         <item itemvalue="JUnit.SaleDaoH2ImplTest" />
         <item itemvalue="JUnit.ExpensesDaoH2ImplTest.getAll_ExpensesIfTheyExistInDB" />
         <item itemvalue="JUnit.ExpensesDaoH2ImplTest.testInsertExpenses" />
-        <item itemvalue="JUnit.ProductDaoH2ImplTest.deleteProductIfIdValid" />
       </list>
     </recent_temporary>
   </component>

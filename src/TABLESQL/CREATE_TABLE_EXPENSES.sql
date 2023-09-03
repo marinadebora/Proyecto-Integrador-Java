@@ -5,7 +5,6 @@ addressee VARCHAR(50),
 amount DOUBLE,
 date VARCHAR(50),
 total DOUBLE
-
 );
 
 
